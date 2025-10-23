@@ -13,8 +13,6 @@ This project shows common AI agent patterns using the Workflow DevKit to make ag
 1. Clone the repository and install dependencies:
 
    ```bash
-   git clone https://github.com/vercel/workflow
-   cd workflow
    pnpm install
    ```
 
