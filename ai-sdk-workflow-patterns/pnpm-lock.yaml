@@ -15,7 +15,7 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3(@types/react@19.2.2)(react@19.1.0)
       ai:
-        specifier: ^5.0.47
+        specifier: ^5.0.76
         version: 5.0.76(zod@4.1.11)
       class-variance-authority:
         specifier: ^0.7.1
