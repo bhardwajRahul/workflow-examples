@@ -1,6 +1,6 @@
 # bun-workflow-test
 
-A demonstration of the [Workflow SDK](https://useworkflow.dev/) using Bun runtime. This project showcases how to build durable, long-running workflows with automatic retries and state persistence.
+A demonstration of the [Workflow DevKit](https://useworkflow.dev/) using Bun runtime. This project showcases how to build durable, long-running workflows with automatic retries and state persistence.
 
 ## Features
 
@@ -15,7 +15,7 @@ A demonstration of the [Workflow SDK](https://useworkflow.dev/) using Bun runtim
 ```
 ├── server.ts              # HTTP server with workflow endpoints
 ├── workflow-plugin.ts     # SWC plugin for transforming workflow code
-├── workflow.config.json   # Workflow SDK configuration
+├── workflow.config.json   # Workflow DevKit configuration
 └── workflows/
     └── user-signup.ts     # Example: User signup workflow
 ```
@@ -112,10 +112,10 @@ console.log(run.runId);
 ## Built With
 
 - [Bun](https://bun.sh) - Fast all-in-one JavaScript runtime
-- [Workflow SDK](https://workflow.vercel.app/) - Durable execution framework
+- [Workflow DevKit](https://workflow.vercel.app/) - Durable execution framework
 - [SWC](https://swc.rs/) - Fast TypeScript/JavaScript compiler
 
 ## Learn More
 
-- [Workflow SDK Documentation](https://useworkflow.dev)
+- [Workflow DevKit Documentation](https://useworkflow.dev)
 - [Bun Documentation](https://bun.sh/docs)
