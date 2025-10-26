@@ -1,4 +1,4 @@
-import { sleep, FatalError } from "workflow";
+import { sleep, createWebhook } from "workflow";
 
 export async function handleUserSignup(email: string) {
   "use workflow";
@@ -7,7 +7,12 @@ export async function handleUserSignup(email: string) {
   await sendWelcomeEmail(user);
 
   await sleep("5s");
-  await sendOnboardingEmail(user);
+
+  const webhook = createWebhook();
+  await sendOnboardingEmail(user, webhook.url);
+
+  await webhook;
+  console.log("Webhook Resolved");
 
   return { userId: user.id, status: "onboarded" };
 }
@@ -26,10 +31,11 @@ async function sendWelcomeEmail(user: { id: string; email: string }) {
   console.log(`Sending welcome email to user: ${user.id}`);
 }
 
-async function sendOnboardingEmail(user: { id: string; email: string }) {
+async function sendOnboardingEmail(user: { id: string; email: string }, callback: string) {
   "use step";
 
-
   console.log(`Sending onboarding email to user: ${user.id}`);
+
+  console.log(`Click this link to resolve the webhook: ${callback}`);
 }
 
