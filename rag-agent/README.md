@@ -1,6 +1,6 @@
 # RAG Agent Example
 
-This example shows how to use Workflow to make RAG agents more durable and reliable. It is based on the [Retrieval-Augmented Generation (RAG) guide](https://sdk.vercel.ai/docs/guides/rag-chatbot).
+This example shows how to use Workflow to make RAG agents more durable and reliable. It is based on the [Retrieval-Augmented Generation (RAG) guide](https://ai-sdk.dev/docs/guides/rag-chatbot).
 
 ## Getting Started
 
@@ -50,7 +50,7 @@ This example shows how to use Workflow to make RAG agents more durable and relia
 This project uses the following stack:
 
 - [Next.js](https://nextjs.org) 15 (App Router)
-- [Vercel AI SDK](https://sdk.vercel.ai/docs)
+- [Vercel AI SDK](https://ai-sdk.dev/docs)
 - [Vercel AI Gateway](https://vercel.com/ai-gateway)
 - [Drizzle ORM](https://orm.drizzle.team)
 - [Postgres](https://www.postgresql.org/) with [pgvector](https://github.com/pgvector/pgvector)
