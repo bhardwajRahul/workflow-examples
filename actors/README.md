@@ -27,11 +27,14 @@ This example implements a counter actor that:
 
 ### Key Implementation Details
 
-Based on feedback from the Vercel Workflows team, the hook is created **outside the loop**:
+The recommended pattern is to create the hook **outside the loop** and use it as an async iterator:
 
 ```typescript
-// Create the hook outside the loop (recommended pattern)
-const receiveEvent = createHook<CounterEvent>({
+// Define the hook once for type safety (using defineHook)
+const counterActorHook = defineHook<CounterEvent>();
+
+// In the workflow, create the hook outside the loop
+const receiveEvent = counterActorHook.create({
   token: `counter_actor:${actorId}`,
 });
 
@@ -44,7 +47,7 @@ for await (const event of receiveEvent) {
 }
 ```
 
-This pattern allows the hook to be reused across multiple event resumptions, making it more efficient than recreating the hook on each iteration.
+This pattern allows the hook to be reused across multiple event resumptions, making it more efficient than recreating the hook on each iteration. Using `defineHook()` also ensures type safety between hook creation and resumption in API routes.
 
 ## Project Structure
 
@@ -170,10 +173,11 @@ In this example, state is stored in-memory for simplicity. In production, you wo
 
 ### Event Processing
 
-Events are sent to the actor via `resumeHook()`:
+Events are sent to the actor via the defined hook's `resume()` method:
 - The hook token is deterministic (`counter_actor:${actorId}`)
-- External systems can send events using the token
+- External systems can send events using the token via `counterActorHook.resume()`
 - The workflow resumes to process each event
+- Using `defineHook()` ensures type-safe event payloads
 
 ## Production Considerations
 
@@ -192,7 +196,8 @@ Events are sent to the actor via `resumeHook()`:
 
 ## Notes
 
-- The hook is created **outside the loop** as recommended by the Workflows team
+- The recommended pattern is to create the hook **outside the loop** and use it as an async iterator
 - Hooks are async iterators, allowing them to be reused across multiple resumptions
+- Using `defineHook()` ensures type safety between hook creation and resumption
 - Each workflow run acts as a unique actor instance
 - State is managed internally by the workflow for this example
