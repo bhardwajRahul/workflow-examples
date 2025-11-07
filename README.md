@@ -7,3 +7,8 @@ This directory contains different examples of how to use the Workflow DevKit.
 - [Birthday Card Generator](https://github.com/vercel/workflow-examples/tree/main/birthday-card-generator) - Example of how to use the Workflow DevKit to build a birthday card generator.
 - [Custom Adapter](https://github.com/vercel/workflow-examples/tree/main/custom-adapter) - Example of building a custom adapter to run workflows on other frameworks and runtimes, like Bun.
 - [Flight Booking App](https://github.com/vercel/workflow-examples/tree/main/flight-booking-app) - Example of how to use the Workflow DevKit to build a flight booking app.
+
+## Framework Integrations
+
+- [Next.js](https://github.com/vercel/workflow-examples/tree/main/nextjs)
+- [SvelteKit](https://github.com/vercel/workflow-examples/tree/main/sveltekit)
