@@ -18,7 +18,7 @@ This example shows how to use Workflow to make AI agents more reliable and produ
    pnpm install
    ```
 
-2. Create a `.env.local` file in `examples/flight-booking-app/`:
+2. Create a `.env.local` file:
 
    ```bash
    touch .env.local
@@ -37,6 +37,35 @@ This example shows how to use Workflow to make AI agents more reliable and produ
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) to see the app
+
+## Deploying
+
+### Vercel (Recommended)
+
+Deploy directly to Vercel, no additional configuration is needed. Workflow works out of the box.
+
+### Other Platforms (Railway, Render, etc.)
+
+For non-Vercel deployments, you'll need to configure a PostgreSQL World to handle workflow state persistence.
+
+1. **Set up a PostgreSQL database** (Railway, Supabase, Neon, etc.)
+2. **Add environment variables:**
+
+    ```bash
+    WORKFLOW_TARGET_WORLD="@workflow/world-postgres"
+    WORKFLOW_POSTGRES_URL="postgres://postgres:password@db.yourdb.co:5432/postgres"
+    WORKFLOW_POSTGRES_JOB_PREFIX="workflow_"
+    WORKFLOW_POSTGRES_WORKER_CONCURRENCY=10
+    ```
+3. Run the following command to setup the database schema:
+
+    ```bash
+    pnpm exec workflow-postgres-setup
+    ```
+
+4. Deploy to your platform of choice
+
+Learn more about the Workflow PostgreSQL World [here](https://useworkflow.dev/docs/deploying/world/postgres-world)
 
 ## Key Features Demonstrated
 
