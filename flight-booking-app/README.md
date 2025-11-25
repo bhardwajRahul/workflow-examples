@@ -1,5 +1,7 @@
 # Flight Booking App
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fworkflow-examples%2Ftree%2Fmain%2Fflight-booking-app&env=AI_GATEWAY_API_KEY)
+
 This example shows how to use Workflow to make AI agents more reliable and production-ready by adding automatic retries, resume capabilities, and fault tolerance to AI SDK applications. It showcases a conversational flight booking assistant that can search flights, check status, and book tickets—all while being resilient to network failures and LLM errors.
 
 ## Getting Started
@@ -44,11 +46,17 @@ This example shows how to use Workflow to make AI agents more reliable and produ
 
 Deploy directly to Vercel, no additional configuration is needed. Workflow works out of the box.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fworkflow-examples%2Ftree%2Fmain%2Fflight-booking-app&env=AI_GATEWAY_API_KEY)
+
 ### Other Platforms (Railway, Render, etc.)
 
-For non-Vercel deployments, you'll need to configure a PostgreSQL World to handle workflow state persistence.
+For non-Vercel deployments, you can configure a PostgreSQL World to handle workflow state persistence.
 
-1. **Set up a PostgreSQL database** (Railway, Supabase, Neon, etc.)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/NRNZjD)
+
+### Manual Setup
+
+1. **Set up a PostgreSQL database** (Supabase, Neon, etc.)
 2. **Add environment variables:**
 
     ```bash
@@ -57,15 +65,16 @@ For non-Vercel deployments, you'll need to configure a PostgreSQL World to handl
     WORKFLOW_POSTGRES_JOB_PREFIX="workflow_"
     WORKFLOW_POSTGRES_WORKER_CONCURRENCY=10
     ```
-3. Run the following command to setup the database schema:
+
+3. **Create the database schema:**
 
     ```bash
     pnpm exec workflow-postgres-setup
     ```
 
-4. Deploy to your platform of choice
+4. **Deploy** to your platform of choice
 
-Learn more about the Workflow PostgreSQL World [here](https://useworkflow.dev/docs/deploying/world/postgres-world)
+Learn more about the Workflow PostgreSQL World [here](https://useworkflow.dev/docs/deploying/world/postgres-world).
 
 ## Key Features Demonstrated
 
