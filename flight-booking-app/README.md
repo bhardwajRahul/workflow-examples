@@ -54,7 +54,7 @@ For non-Vercel deployments, you can configure a PostgreSQL World to handle workf
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/NRNZjD)
 
-### Manual Setup
+#### Manual Setup
 
 1. **Set up a PostgreSQL database** (Supabase, Neon, etc.)
 2. **Add environment variables:**
