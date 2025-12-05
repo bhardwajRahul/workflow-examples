@@ -33,7 +33,7 @@
     "react-dom": "^18",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "workflow": "4.0.1-beta.19",
+    "workflow": "4.0.1-beta.27",
     "zod": "^3.25.76"
   },
   "devDependencies": {
