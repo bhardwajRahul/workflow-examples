@@ -25,5 +25,5 @@ This starter is a template for a Astro project that uses Workflow DevKit. It fol
 3. Invoke the workflow by `curl`:
 
    ```bash
-    curl -X POST --json '{"email":"hello@example.com"}' http://localhost:3000/api/signup
+    curl -X POST --json '{"email":"hello@example.com"}' http://localhost:4321/api/signup
     ```
