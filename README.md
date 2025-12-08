@@ -12,5 +12,8 @@ This directory contains different examples of how to use the Workflow DevKit.
 
 ## Framework Integrations
 
+- [Hono](https://github.com/vercel/workflow-examples/tree/main/hono)
 - [Next.js](https://github.com/vercel/workflow-examples/tree/main/nextjs)
+- [Nitro](https://github.com/vercel/workflow-examples/tree/main/nitro)
+- [Nuxt](https://github.com/vercel/workflow-examples/tree/main/nuxt)
 - [SvelteKit](https://github.com/vercel/workflow-examples/tree/main/sveltekit)
