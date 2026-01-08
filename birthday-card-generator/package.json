@@ -12,7 +12,6 @@
     "@hookform/resolvers": "^5.2.2",
     "@react-email/render": "^1.4.0",
     "@vercel/analytics": "^1.5.0",
-    "workflow": "4.0.1-beta.29",
     "ai": "^5.0.68",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -35,6 +34,7 @@
     "tailwind-merge": "^3.3.1",
     "uuid": "^13.0.0",
     "vaul": "^1.1.2",
+    "workflow": "4.0.1-beta.42",
     "zod": "^4.1.12"
   },
   "devDependencies": {
